@@ -1,0 +1,70 @@
+﻿* {
+    margin: 0px;
+    padding:0px;
+}
+
+body {
+    
+    background-color: darkred;
+    background-image: url("topography.png");
+    
+}
+
+
+
+
+
+nav {
+   
+    height: 50px;
+    background-color: #333333;
+    word-spacing: 40px;
+    text-align: right;
+    font-family: courier;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+a {
+    color: #ff0099;
+    
+}
+
+h1 {
+    color: black;
+    font-family: roboto;
+    padding-top: 3%;
+}
+
+p {
+    color: black;
+    text-align: justify;
+    font-family: consolas;
+    padding-top: 2%;
+}
+
+h2 {
+    color: black;
+    font-family: roboto;
+    text-align: center;
+    padding-top: 5%;
+}
+
+h3 {
+    color: black;
+    padding-top: 5%;
+}
+
+h4 {
+    color: #ff0099;
+    font-size: 16px;
+}
+
+main {
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+
