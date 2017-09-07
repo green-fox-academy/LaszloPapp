@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    width: 500px;
+    font-size: 26px;
+    font-family: Times;
+    color: #F5A729;
+}
+
+p:nth-child(2) {
+    padding-left: 15px;
+}
+
+span {
+    padding: 5px;
+}
+
+p {
+    font-family: sans-serif;
+}
+
