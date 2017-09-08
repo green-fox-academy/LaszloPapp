@@ -1,0 +1,145 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    background-color: black;
+    
+}
+
+
+
+div[class="main"] {
+    margin: auto;
+    width: 70%;
+    background-color: #454141;
+    box-sizing: border-box;
+    padding-top: 10px;
+    border: 10px solid black;
+    
+
+}
+
+header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    background-color: #2B0808;
+    margin: auto;
+    
+}
+
+div[id="left-box"], div[id="right-box"] {
+    display: inline-block;
+    width: 49.7%;
+    height: 450px;
+    background-color: #454141;
+    box-sizing: border-box;
+    
+    
+}
+
+div[id="right-box"] {
+    float: right;
+}
+
+legend {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: wheat;
+    font-size: 26px;
+}
+
+input[type="name"] {
+    margin: 10px 0px 0px 0px;
+    box-sizing: border-box;
+    width: 45%;
+    border-radius: 12px;
+    background-color: #B0A2A2;
+}
+
+
+input[type="birth"] {
+    margin: 10px 0px 0px 0px;
+    box-sizing: border-box;
+    width: 15%;
+    border-radius: 12px;
+    background-color: #B0A2A2;
+}
+
+
+div[id="footer"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 500px;
+    background-color: #454141;
+    margin: auto;
+    padding-top: 20px;
+}
+
+form {
+    display: inline-block;
+    float: right;
+    width: 50%;
+    margin: -67px;
+    height: 12px;
+}
+
+h3 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color: #2B2505
+}
+
+h1 {
+    font-size: 40px;
+    color: wheat;
+}
+
+input[type="phone number"] {
+    border-radius: 12px;
+    background-color: #B0A2A2;
+}
+
+input[type="Email address"] {
+    width: 70%;
+    border-radius: 12px;
+    background-color: #B0A2A2;
+}
+
+input[type="Facebook"] {
+    width: 70%;
+    border-radius: 12px;
+    background-color: #B0A2A2;
+}
+
+textarea {
+    display: inline-block;
+    width: 70%;
+    height: 200px;
+    border-radius: 12px;
+    background-color: #B0A2A2;
+}
+
+
+
+button [name="submit"] {
+    color: black;
+    border-radius: 12px;
+}
+
+div[id="boxcheck1"] {
+    
+    width: 30%;
+    display: inline-block;
+}
+
+div[id="boxcheck2"] {
+    
+    width: 45%;
+    display: inline-block;
+}

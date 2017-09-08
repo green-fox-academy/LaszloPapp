@@ -1,0 +1,37 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+div {
+    display: inline-block;
+    
+}
+
+p {
+    background-color: #0CEBDE;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 7px;
+    line-height: 150px;
+    font-size: 36px;
+    color: white;
+}
+
+div[id="first"] > p:first-child {
+    background-color: #B90CEB;
+}
+
+div[id="third"] > p:last-child {
+    background-color: #EBBE0C;
+}
+
+#main {
+    align-content: center;
+}
+
+
