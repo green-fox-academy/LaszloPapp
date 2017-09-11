@@ -8,7 +8,7 @@ public class VariableMutation {
 
         a += 10;
 
-        System.out.println(a);
+            System.out.println(a);
 
 
         int b = 100;
@@ -17,41 +17,34 @@ public class VariableMutation {
 
         b -= 7;
 
-
-        System.out.println(b);
+            System.out.println(b);
 
 
         int c = 44;
 
         // please double c's value
 
-
         c *= 2;
 
-
-        System.out.println(c);
+            System.out.println(c);
 
 
         int d = 125;
 
         // please divide by 5 d's value
 
-
         d /= 5;
 
-
-        System.out.println(d);
+            System.out.println(d);
 
 
         int e = 8;
 
         // please cube of e's value
 
-
         e *= e * e;
 
-
-        System.out.println(e);
+            System.out.println(e);
 
 
         int f1 = 123;
@@ -76,6 +69,7 @@ public class VariableMutation {
         if ((2 * g2) > g1) {
             System.out.println("True");
         } else {
+
         }
 
 
@@ -118,12 +112,6 @@ public class VariableMutation {
 
         //fill the k variable with its content 4 times
 
-
-
-
-
         System.out.println(k + k + k + k);
-
-
     }
 }

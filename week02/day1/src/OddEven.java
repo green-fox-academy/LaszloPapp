@@ -6,17 +6,15 @@ public class OddEven {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Give me a number");
+            System.out.println("Give me a number");
 
         int i = Integer.parseInt(sc.next());
 
 
-        if (i%2==0) {
-            System.out.println("Even");
-        }else{
-            System.out.println("Odd");
-
+            if (i%2==0){
+                System.out.println("Even");
+            }else{
+                System.out.println("Odd");
+            }
         }
-
     }
-}

@@ -13,7 +13,5 @@ public class Cuboid {
         double cuboidVolume = longSide*shortSide*heightSide;
 
                 System.out.println("Volume is: " + cuboidVolume);
-
     }
-
 }

@@ -11,7 +11,7 @@ public class SausageParty {
 
         int girlNum = sc.nextInt();
 
-        System.out.println("How many boys?");
+            System.out.println("How many boys?");
 
         int boyNum = sc.nextInt();
 
@@ -24,7 +24,8 @@ public class SausageParty {
             System.out.println("Average party...");
         }else if (girlNum==0){
             System.out.println("Sausage party");
+        }else{
+            System.out.println("Bad party...");
         }
-
     }
 }
