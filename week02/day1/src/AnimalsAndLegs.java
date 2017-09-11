@@ -23,6 +23,6 @@ public class AnimalsAndLegs {
 
         int userInput2 = sc.nextInt();
 
-            System.out.println("That are " + ((userInput1*4)+(userInput2*4)) + " legs all together");
+            System.out.println("There are " + ((userInput1*2)+(userInput2*4)) + " legs all together");
     }
 }
