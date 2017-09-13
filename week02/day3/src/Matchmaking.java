@@ -20,7 +20,7 @@ public class Matchmaking {
         }
 
             System.out.println(order);
-        
+
     }
 
 }
