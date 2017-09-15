@@ -1,12 +1,19 @@
+import java.util.Scanner;
+
 public class drawTriangle {
 
     public static void main(String[] args) {
 
-            for (int i=1; i <= 4; i++) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Give a number");
+        int userInput = sc.nextInt();
+
+            for (int i=1; i <= userInput; i++) {
             for (int j=1; j <= i; ++j) {
                 System.out.print("*");
             }
-            System.out.println();
+                System.out.println();
         }
     }
 }
