@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Anagram {
 
@@ -23,12 +23,13 @@ public class Anagram {
 
         boolean anagram = true;
 
-        for (int i = 0; i <= input1.length(); i++) {
-            for (int j = 0; j <= input2.length(); j++) {
-                if (input1!= input2) {
-                    anagram = false;
-                } else {
+
+        for (int i = 0; i < input1.length(); i++) {
+            for (int j = 0; j < input2.length(); j++) {
+                if (input1.charAt(i) == input2.charAt(j)) {
                     anagram = true;
+                } else {
+                    anagram = false;
                 }
 
             }

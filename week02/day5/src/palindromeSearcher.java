@@ -1,7 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 
 public class palindromeSearcher {
 
@@ -37,22 +34,6 @@ public class palindromeSearcher {
                     y++;
                 }
             }
-   /*       if (input.length()%2==0){
-              if(i>2 && input.charAt(i)==input.charAt(i-2)){
-                  temp.add(input.substring(i-2, i+1));
-                  output.add(temp.toString());
-                  temp.clear();
-                  int x = 3;
-                  int y = 1;
-                  while (i>= x && input.charAt(i-x) == input.charAt(i+y)){
-                      temp.add((input.substring(i-x, i+y)));
-                      output.add(temp.toString());
-                      temp.clear();
-                      x++;
-                      y++;
-                  }
-              }
-          } */
         }
         return output;
     }

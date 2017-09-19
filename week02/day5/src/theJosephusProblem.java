@@ -5,7 +5,7 @@ public class theJosephusProblem {
 
     public static void main(String[] args) {
 
-        System.out.println(winning(7));
+        System.out.println(winning(21));
 
     }
 
