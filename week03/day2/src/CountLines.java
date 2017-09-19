@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class CountLines {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+     //   Scanner scanner = new Scanner(System.in);
 
 
         System.out.println(linesNum("my-file.txt"));
@@ -23,9 +23,9 @@ public class CountLines {
 
     static int linesNum(String input){
         int lineCount = 0;
-try{
-    Path filePath = Paths.get(input);
-    List<String> lines = Files.readAllLines(filePath);
+    try{
+        Path filePath = Paths.get(input);
+        List<String> lines = Files.readAllLines(filePath);
     for (int i = 0; i < lines.size(); i++) {
         lineCount=i;
     }

@@ -7,8 +7,13 @@
 // to the file and each line should be "apple"
 // The function should not raise any error if it could not write the file.
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WriteMultipleLines{
     public static void main(String[] args) {
@@ -17,8 +22,23 @@ public class WriteMultipleLines{
         String apple = "apple";
         int lineNum = 5;
 
+        fileWriter(myPath, apple, lineNum);
+
     }
-    static
+    static void fileWriter(Path inPath, String inWord, int inLineNum) {
 
+        List<String> newList = new ArrayList<>();
+        newList.add(inWord);
 
+        for (int i = 0; i < inLineNum; i++) {
+
+            try {
+                Files.write(inPath, newList, StandardOpenOption.APPEND);
+
+            } catch (IOException e) {
+            }
+
+        }
+
+    }
 }
