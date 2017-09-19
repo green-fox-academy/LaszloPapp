@@ -9,9 +9,8 @@ public class DoubleItems {
             System.out.println(ag[i]*2);
         }
 
-
-        }
-
     }
+
+}
 
 
