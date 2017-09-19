@@ -20,7 +20,7 @@ public class ReversedLines {
             }
 
         } catch (IOException e) {
-            System.out.println("FASZ");
+            System.out.println("Error");
         }
     }
 }
