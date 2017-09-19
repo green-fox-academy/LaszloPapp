@@ -9,7 +9,7 @@ import java.util.List;
 public class WriteSingleLine {
   public static void main(String[] args) {
 
-    Path myPath = Paths.get("my-file.txt");
+    Path myPath = Paths.get("src/my-file.txt");
     List<String> newList = new ArrayList<>();
     newList.add("Laszlo Papp");
     try {

@@ -11,8 +11,8 @@ public class CopyFile{
 
     public static void main(String[] args) {
 
-        Path myPath = Paths.get("my-file.txt");
-        Path myPath2 = Paths.get("my-file2.txt");
+        Path myPath = Paths.get("src/my-file.txt");
+        Path myPath2 = Paths.get("src/my-file2.txt");
 
         fileCopy(myPath, myPath2);
 

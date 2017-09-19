@@ -18,7 +18,7 @@ import java.util.List;
 public class WriteMultipleLines{
     public static void main(String[] args) {
 
-        Path myPath = Paths.get("my-file.txt");
+        Path myPath = Paths.get("src/my-file.txt");
         String apple = "apple";
         int lineNum = 5;
 

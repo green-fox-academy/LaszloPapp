@@ -17,7 +17,7 @@ public class CountLines {
      //   Scanner scanner = new Scanner(System.in);
 
 
-        System.out.println(linesNum("my-file.txt"));
+        System.out.println(linesNum("src/my-file.txt"));
 
     }
 
