@@ -31,18 +31,18 @@ public class GuessMyNumber {
 
         while(inputGuess!=n) {
 
-            if (inputGuess == n) {
-                System.out.println("Congratulations. You won!");
-            } else if (inputGuess > n) {
-                System.out.println("Too high " + (" Try again!"));
-                 inputGuess = sc.nextInt();
-            } else if (inputGuess < n) {
-                System.out.println("Too low " + " Try again!");
-                 inputGuess = sc.nextInt();
-            } else {
 
+            if (inputGuess > n) {
+                System.out.println("Too high " + (" Try again!"));
+                inputGuess = sc.nextInt();
+            }else{
+                    System.out.println("Too low " + " Try again!");
+            inputGuess = sc.nextInt();
             }
+
+
         }
+        System.out.println("Congratulations. You won!");
             return inputGuess;
     }
 }
