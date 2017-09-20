@@ -11,9 +11,16 @@ public class CenterBoxFunction {
       // the square size
       // and draws a square of that size to the center of the canvas.
       // draw 3 squares with that function.
+        boxCenter(graphics, 90);
+        boxCenter(graphics, 230);
+        boxCenter(graphics, 290);
 
 
+    }
 
+
+    static void boxCenter(Graphics graphics, int squareSize){
+        graphics.drawOval(160, 171, squareSize, squareSize);
     }
 
 //    Don't touch the code below

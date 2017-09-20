@@ -11,10 +11,20 @@ public class PositionSquare {
       // the x and y coordinates of the square's top left corner
       // and draws a 50x50 square from that point.
       // draw 3 squares with that function.
+        squarePos(graphics, 25, 25);
+        squarePos(graphics, 50, 50);
+        squarePos(graphics, 75, 75);
 
 
 
     }
+
+     static void squarePos(Graphics graphics, int posX, int posY) {
+
+        graphics.drawOval(posX, posY, posX, posY);
+
+    }
+
 
 //    Don't touch the code below
     static int WIDTH = 320;
