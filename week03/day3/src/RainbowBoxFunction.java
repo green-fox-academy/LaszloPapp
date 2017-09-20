@@ -31,8 +31,7 @@ public class RainbowBoxFunction {
 
             for (int i = 0; i < 5; i++) {
                 graphics.setColor(color);
-                graphics.fillRect(160, 170, sizeSq, sizeSq);
-                sizeSq -= 30;
+                graphics.drawRect(25+i*30, 25+i*30, sizeSq+i*30, sizeSq+i*30);
             }
         }
 
