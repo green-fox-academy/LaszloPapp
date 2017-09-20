@@ -1,7 +1,5 @@
 import javax.swing.*;
-
 import java.awt.*;
-
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class GoToCenter {
@@ -11,10 +9,20 @@ public class GoToCenter {
       // the x and y coordinates of the line's starting point
       // and draws a line from that point to the center of the canvas.
       // draw 3 lines with that function.
+        coordGet(graphics,25, 25);
+        coordGet(graphics,160, 0);
+        coordGet(graphics,0, 160);
 
 
 
     }
+
+    static void coordGet(Graphics graphics, int cooX, int cooY){
+        graphics.drawLine(cooX, cooY, 160, 171);
+
+
+    }
+
 
 //    Don't touch the code below
     static int WIDTH = 320;
