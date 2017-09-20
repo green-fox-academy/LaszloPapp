@@ -20,7 +20,7 @@ public class CenterBoxFunction {
 
 
     static void boxCenter(Graphics graphics, int squareSize){
-        graphics.drawOval(160, 171, squareSize, squareSize);
+        graphics.drawRect(25, 25, squareSize, squareSize);
     }
 
 //    Don't touch the code below
