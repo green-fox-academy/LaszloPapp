@@ -1,13 +1,13 @@
 import javax.swing.*;
-
 import java.awt.*;
-
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Diagonals {
 
     public static void mainDraw(Graphics graphics){
       // draw the canvas' diagonals in green.
+        graphics.setColor(Color.GREEN);
+        graphics.drawLine(0, 0, 320, 343);
 
 
 
