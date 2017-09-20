@@ -1,13 +1,24 @@
 import javax.swing.*;
-
 import java.awt.*;
-
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class ColoredBox {
 
     public static void mainDraw(Graphics graphics){
       // draw a box that has different colored lines on each edge.
+        graphics.setColor(Color.GREEN);
+        graphics.drawLine(25,25, 100, 25);
+
+        graphics.setColor(Color.RED);
+        graphics.drawLine(25, 25, 25, 100);
+
+        graphics.setColor(Color.BLUE);
+        graphics.drawLine(25, 100, 100, 100);
+
+        graphics.setColor(Color.YELLOW);
+        graphics.drawLine(100, 100, 100, 25);
+
+
 
 
 
