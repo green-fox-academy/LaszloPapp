@@ -4,8 +4,10 @@ public class TodoPrint {
 
         String todoText = " - Buy milk\n";
 
+        System.out.println("My todo:");
+
         if(todoText.endsWith("\n")) {
-            System.out.println("My todo: - Buy milk\n");
+            System.out.println(" - Buy milk");
         }
 
         if(todoText.endsWith("\n")) {

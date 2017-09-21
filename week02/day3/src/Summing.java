@@ -10,8 +10,9 @@ public class Summing {
 
     }
 
-    static int sum(int imput) {
-        int sum = imput
+    public static void summer(){
+
+
     }
 
 }
