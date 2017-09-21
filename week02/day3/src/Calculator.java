@@ -4,12 +4,16 @@ public class Calculator {
 
     public static void main(String[] args) {
 
-
+/*
         Scanner sc = new Scanner(System.in);
         System.out.println("Please type in the expression:");
-        String question  = sc.next();
 
-        System.out.println();
+        Scanner kb = new Scanner(System.in);
+        int result = kb.nextInt();
+        System.out.println(); */
+
+        System.out.println(Calcula(+,3,6));
+
 
     }
 
@@ -17,15 +21,15 @@ public class Calculator {
         int result = 0;
 
         if(operation=="+"){
-            result=operand1+operand2;
+            result = operand1 + operand2;
         }if(operation=="-"){
-            return operand1-operand2;
+            result = operand1 - operand2;
         }if(operation=="*"){
-            return operand1*operand2;
+            result = operand1 * operand2;
         }if(operation=="/"){
-            return operand1/operand2;
+            result = operand1 / operand2;
         }if(operation=="%"){
-            return operand1%operand2;
+            result = operand1 % operand2;
         }
         return result;
     }
