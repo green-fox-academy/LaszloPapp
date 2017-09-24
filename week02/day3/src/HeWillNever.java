@@ -41,9 +41,6 @@ public class HeWillNever {
             System.out.println(map.get(notSoCrypticMessage[i]));
         }
 
-
-      //  System.out.println(out);
-
     }
 
 }
