@@ -12,7 +12,7 @@ public class Calculator {
         int result = kb.nextInt();
         System.out.println(); */
 
-        System.out.println(Calcula(+,3,6));
+        System.out.println(Calcula("+",3,6));
 
 
     }
