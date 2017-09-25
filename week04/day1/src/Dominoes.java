@@ -35,16 +35,37 @@ public class Dominoes {
 
         List<Domino> temp = new ArrayList<>();
 
-        for (int i = 0; i < dominoes.size(); i++) {
+     /*   for (int i = 0; i < dominoes.size(); i++) {
             for (int j = 0; j < dominoes.size(); j++) {
                     if(dominoes.get(i).getValues()[1]==dominoes.get(j).getValues()[0]){
                         temp.add(dominoes.get(i));
                         temp.add(dominoes.get(j));
 
-                        
+
+
+
                         }
                     }
+                }*/
+int tempIndex = -1;
+
+        while(dominoes.size()>0){
+            if(temp.size()==0){
+                temp.add(dominoes.get(0));
+                tempIndex++;
+                dominoes.remove(0);
+            }else {
+
+                for(Domino item : dominoes){
+                    if(temp.get(tempIndex).getValues()[1]==item.getValues()[0]){
+                        temp.add(item);
+                        tempIndex++;
+                        dominoes.remove(item);
+                        break;
+                    }
                 }
+            }
+        }
 
         return temp;
 
