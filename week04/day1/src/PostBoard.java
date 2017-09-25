@@ -40,6 +40,15 @@ public class PostBoard {
                                 "When I asked to take his picture outside one of IBM’s New York City offices, " +
                                     "he told me that he wasn’t really into the whole organizer profile thing.";
 
+
+        //kutya object of Animal class
+        Animal kutya = new Animal();
+        kutya.eat(50);
+        System.out.println(kutya.hunger);
+        kutya.drink(20);
+        System.out.println(kutya.thirst);
+        kutya.play(2, 3);
+        System.out.println(kutya.thirst);
     }
 
 }
