@@ -38,26 +38,15 @@ public class Dominoes {
         for (int i = 0; i < dominoes.size(); i++) {
             for (int j = 0; j < dominoes.size(); j++) {
                     if(dominoes.get(i).getValues()[1]==dominoes.get(j).getValues()[0]){
+                        temp.add(dominoes.get(i));
                         temp.add(dominoes.get(j));
 
-                    /*  temp = dominoes.get(i + 1)
-                   dominoes.set(i + 1, dominoes.get(j));
-                   dominoes.set(j, temp);  */
-
-
-                        return temp;
-                    }else{
-
-                    }
-
-
+                        
+                        }
                     }
                 }
 
-
-
-
-        return dominoes;
+        return temp;
 
     }
 
