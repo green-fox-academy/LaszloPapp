@@ -42,8 +42,8 @@ public class Circles {
 
 
     //    Don't touch the code below
-    static int WIDTH = 600;
-    static int HEIGHT = 600;
+    static int WIDTH = 900;
+    static int HEIGHT = 800;
     public static void main(String[] args) throws InterruptedException {
         JFrame jFrame = new JFrame("Drawing");
         jFrame.setSize(new Dimension(1000, 1000));
@@ -53,11 +53,11 @@ public class Circles {
         jFrame.add(im);
         im.setBackground(Color.black);
         jFrame.setVisible(true);
-        boolean trip = false;
+        boolean trip = true;
         do {
             im.repaint();
             Thread.sleep(200);
-        } while (!trip);
+        } while (trip);
     }
     static class ImagePanel extends JPanel{
         @Override

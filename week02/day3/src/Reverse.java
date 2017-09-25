@@ -9,7 +9,11 @@ public class Reverse {
 
         System.out.println(reverse(reversed));
 
-        System.out.println(reverser(".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI"));
+
+        String re = reverser(reversed);
+        System.out.println(re);
+
+
 
     }
 
@@ -23,10 +27,11 @@ public class Reverse {
 
         static String reverser(String reBack){
 
-                for (int j = reBack.length()-1; j > 0; j--) {
-                    reBack.charAt(j);
+                String reString = "";
+                for (int j = reBack.length()-1; j >= 0; j--) {
+                    reString+=(reBack.charAt(j));
                 }
-                return reBack;
+            return reString;
         }
 
 }
