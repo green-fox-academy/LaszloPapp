@@ -2,24 +2,29 @@
 
 public class Fibonacci {
 
-    private int pos;
+    int input;
 
-    public static int fibonaPos(int input) {
+    public Fibonacci(int input){
+
+        this.input = input;
+    }
+
+    public int fibonaPos() {
+
+        int index = (input-1)+(input-2);
 
         if (input <= 1) {
             return input;
-        } else {
-            return fibonaPos(input - 1) + fibonaPos(input - 2);
+        }return index;
 
-        }
 
     }
 
-    public int getPos() {
+ /*   public int getPos() {
         return pos;
     }
 
     public void setPos(int pos) {
         this.pos = pos;
-    }
+    } */
 }
