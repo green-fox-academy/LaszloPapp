@@ -6,12 +6,12 @@ import java.io.IOException;
 public class Hero extends PositionedImage {
 
     public Hero(){
-        super("bat-down.png", 0,0);
+        super("batDown.png", 0,0);
 
     }
     public void heroUp (){
         try {
-            image = ImageIO.read(new File("bat-down.png"));
+            image = ImageIO.read(new File("batDown.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -19,7 +19,7 @@ public class Hero extends PositionedImage {
 
     public void heroDown (){
         try {
-            image = ImageIO.read(new File("bat-down.png"));
+            image = ImageIO.read(new File("batDown.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

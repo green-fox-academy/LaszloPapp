@@ -12,8 +12,9 @@ public class Board extends JComponent implements KeyListener {
     int[][] mapArray;
     Hero batman;
     Boss joker;
-    BasicEnemy first;
-    BasicEnemy second;
+    BasicEnemy harley1;
+    BasicEnemy harley2;
+    BasicEnemy harley3;
 
     public Board() {
         mapArray = new int [][]{
@@ -35,8 +36,13 @@ public class Board extends JComponent implements KeyListener {
 
         batman = new Hero();
         joker = new Boss();
-        first = new BasicEnemy();
-        second = new BasicEnemy();
+        harley1 = new BasicEnemy();
+        harley2 = new BasicEnemy();
+            harley2.posX = 4;
+            harley2.posY = 5;
+        harley3 = new BasicEnemy();
+            harley3.posX = 7;
+            harley3.posY = 1;
     }
 
     @Override
@@ -45,8 +51,8 @@ public class Board extends JComponent implements KeyListener {
       //  graphics.fillRect(testBoxX, testBoxY, 72, 72);
         // here you have a 720x720 canvas
         // you can create and draw an image using the class below e.g.
-        PositionedImage floor = new PositionedImage("floor.png", 0, 0);
-        PositionedImage wall = new PositionedImage("wall.png", 0, 0);
+        PositionedImage floor = new PositionedImage("iwall.png", 0, 0);
+        PositionedImage wall = new PositionedImage("texture.png", 0, 0);
         for (int i = 0; i < mapArray.length; i++) {
             for (int j = 0; j < mapArray.length; j++) {
                 if (mapArray[i][j] == 1) {
@@ -62,7 +68,9 @@ public class Board extends JComponent implements KeyListener {
         }
         batman.draw(graphics);
         joker.draw(graphics);
-        first.draw(graphics);
+        harley1.draw(graphics);
+        harley2.draw(graphics);
+        harley3.draw(graphics);
     }
 
     // To be a KeyListener the class needs to have these 3 methods in it
