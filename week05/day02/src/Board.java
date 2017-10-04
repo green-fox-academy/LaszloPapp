@@ -1,18 +1,22 @@
+import javafx.geometry.Pos;
+import sun.swing.BakedArrayList;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 public class Board extends JComponent implements KeyListener {
 
-    int testBoxX;
-    int testBoxY;
-    String fileName;
-    int[][] wallArray;
+    int[][] mapArray;
     Hero batman;
+    Boss joker;
+    BasicEnemy first;
+    BasicEnemy second;
 
     public Board() {
-        wallArray = new int [][]{
+        mapArray = new int [][]{
                 {0,0,0,1,0,1,0,0,0,0},
                 {0,0,0,1,0,1,0,1,1,0},
                 {0,1,1,1,0,1,0,1,1,0},
@@ -30,7 +34,9 @@ public class Board extends JComponent implements KeyListener {
         setVisible(true);
 
         batman = new Hero();
-
+        joker = new Boss();
+        first = new BasicEnemy();
+        second = new BasicEnemy();
     }
 
     @Override
@@ -41,9 +47,9 @@ public class Board extends JComponent implements KeyListener {
         // you can create and draw an image using the class below e.g.
         PositionedImage floor = new PositionedImage("floor.png", 0, 0);
         PositionedImage wall = new PositionedImage("wall.png", 0, 0);
-        for (int i = 0; i < wallArray.length; i++) {
-            for (int j = 0; j < wallArray.length; j++) {
-                if (wallArray[i][j] == 1) {
+        for (int i = 0; i < mapArray.length; i++) {
+            for (int j = 0; j < mapArray.length; j++) {
+                if (mapArray[i][j] == 1) {
                     wall.posX = i;
                     wall.posY = j;
                     wall.draw(graphics);
@@ -55,6 +61,8 @@ public class Board extends JComponent implements KeyListener {
             }
         }
         batman.draw(graphics);
+        joker.draw(graphics);
+        first.draw(graphics);
     }
 
     // To be a KeyListener the class needs to have these 3 methods in it
@@ -72,16 +80,17 @@ public class Board extends JComponent implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
         // When the up or down keys hit, we change the position of our box
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            batman.posY--;
+
+        if (e.getKeyCode() == KeyEvent.VK_UP && mapArray[batman.posX][batman.posY-1] != 1) {
+            batman.posY-- ;
             batman.heroUp();
-        } else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+        } else if(e.getKeyCode() == KeyEvent.VK_DOWN && mapArray[batman.posX][batman.posY+1] != 1) {
             batman.posY++;
             batman.heroDown();
-        } else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+        } else if(e.getKeyCode() == KeyEvent.VK_LEFT && mapArray[batman.posX-1][batman.posY] != 1) {
             batman.posX--;
             batman.heroLeft();
-        } else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+        } else if(e.getKeyCode() == KeyEvent.VK_RIGHT && mapArray[batman.posX+1][batman.posY] != 1){
             batman.posX++;
             batman.heroRight();
         }

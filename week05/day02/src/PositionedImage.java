@@ -3,15 +3,17 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class PositionedImage {
 
     BufferedImage image;
     int posX, posY;
 
-    public PositionedImage(){
+    public PositionedImage(ArrayList<BasicEnemy> enemies){
 
     }
+
 
     public PositionedImage(String filename, int posX, int posY) {
         this.posX = posX;
@@ -21,6 +23,10 @@ public class PositionedImage {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    public PositionedImage() {
 
     }
 
