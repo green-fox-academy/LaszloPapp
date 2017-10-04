@@ -9,6 +9,10 @@ public class PositionedImage {
     BufferedImage image;
     int posX, posY;
 
+    public PositionedImage(){
+
+    }
+
     public PositionedImage(String filename, int posX, int posY) {
         this.posX = posX;
         this.posY = posY;

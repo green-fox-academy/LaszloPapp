@@ -6,22 +6,40 @@ public class Aircraft {
     String aircraftType;
 
 
-    public Aircraft(int tolteny, int baseDamage, String tipusa){
+    public Aircraft(String tipusa){
 
         aircraftType = tipusa;
-        maxAmmo = tolteny;
-        this.baseDamage = baseDamage;
+        if(tipusa=="F16")
+        {
+            maxAmmo = 8;
+            this.baseDamage = 30;
+            currentAmmo = 0;
+        }
+        else
+        { //F35
+            maxAmmo = 12;
+            this.baseDamage = 50;
+            currentAmmo = 0;
+        }
+
     }
 
-    public int fight(){
-        int damageAll = baseDamage*maxAmmo;
-        int ammoSet = (currentAmmo = 0);
-
+    public int fight()
+    {
+        int damageAll = baseDamage*currentAmmo;
+        currentAmmo = 0;
         return damageAll;
     }
 
-    public int refill(int ammoInput){
-        int ammoRemain = (ammoInput-maxAmmo);
+    public int refill(int ammoInput)
+    {
+        int ammoRemain = 0;
+        if(ammoInput>=maxAmmo) {
+            currentAmmo = maxAmmo;
+            ammoRemain = ammoInput - maxAmmo;
+        }else {
+            currentAmmo = ammoInput;
+        }
         return ammoRemain;
     }
 
@@ -32,7 +50,7 @@ public class Aircraft {
 
     public String getStatus(){
 
-        String status = this.aircraftType;
+        String status = "Type: " + aircraftType + " Ammo: " + currentAmmo + " Base damage: " + baseDamage + " All damage: " + baseDamage * currentAmmo;
         return status;
     }
 }
