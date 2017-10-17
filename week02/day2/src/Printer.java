@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Printer {
 
     public static void main(String[] args) {
 
-    String first= "first";
+        ArrayList<String> strings = new ArrayList(Arrays.asList());
         // - Create a function called `printer`
         //   which prints the input String parameters
         // - It can have any number of parameters

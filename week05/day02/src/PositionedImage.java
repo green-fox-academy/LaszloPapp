@@ -10,11 +10,6 @@ public class PositionedImage {
     BufferedImage image;
     int posX, posY;
 
-    public PositionedImage(ArrayList<BasicEnemy> enemies){
-
-    }
-
-
     public PositionedImage(String filename, int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
@@ -23,11 +18,6 @@ public class PositionedImage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-    }
-
-    public PositionedImage() {
-
     }
 
     public void draw(Graphics graphics) {

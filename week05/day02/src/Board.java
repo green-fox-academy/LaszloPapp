@@ -1,11 +1,7 @@
-import javafx.geometry.Pos;
-import sun.swing.BakedArrayList;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 
 public class Board extends JComponent implements KeyListener {
 

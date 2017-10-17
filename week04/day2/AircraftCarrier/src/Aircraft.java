@@ -50,7 +50,7 @@ public class Aircraft {
 
     public String getStatus(){
 
-        String status = "Type: " + aircraftType + " Ammo: " + currentAmmo + " Base damage: " + baseDamage + " All damage: " + baseDamage * currentAmmo;
+        String status = "Type:" + aircraftType + " Ammo:" + currentAmmo + " Base damage:" + baseDamage + " All damage:" + baseDamage * currentAmmo;
         return status;
     }
 }
