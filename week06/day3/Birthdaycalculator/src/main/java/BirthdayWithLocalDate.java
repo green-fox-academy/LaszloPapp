@@ -30,7 +30,7 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
     public boolean isAnniversaryToday(LocalDate date) {
         // TODO - return with true if today is the same month+day as date
         LocalDate localDate = LocalDate.now();
-            if(date == localDate) {
+            if(date.equals(localDate)) {
                 return true;
             }else {
                 return false;
@@ -41,16 +41,16 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
 
     @Override
     public int calculateAgeInYears(LocalDate birthday) {
-
         // TODO - return how many years age the input date 'birthday' was
-        return 0;
+        LocalDate localDate = LocalDate.now();
+        int age = localDate.compareTo(birthday);
+        return age;
     }
 
 
 
     @Override
     public int calculateDaysToNextAnniversary(LocalDate date) {
-
         // TODO - the number of days remaining to the next anniversary of 'date' (e.g. if tomorrow, return 1)
         return 0;
     }
