@@ -24,9 +24,9 @@ public class Lottery {
             System.out.println("`-l` was given with the no additional information.");
         }
 
-        CSVReader reader = new CSVReader(new FileReader("src/lottery.csv"), ';');
+        CSVReader reader = new CSVReader(new FileReader("src/lottery.csv"));
         List<String[]> lines = reader.readAll();
-        CSVWriter writer = new CSVWriter(new FileWriter("src/copydata.csv"), ';', CSVWriter.NO_QUOTE_CHARACTER);
+        CSVWriter writer = new CSVWriter(new FileWriter("src/copydata.csv"), CSVWriter.NO_QUOTE_CHARACTER);
         writer.writeAll(lines);
         writer.close();
 
