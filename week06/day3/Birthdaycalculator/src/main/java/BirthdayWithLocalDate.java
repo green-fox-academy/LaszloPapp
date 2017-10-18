@@ -13,8 +13,6 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
         return localDate;
     }
 
-
-
     @Override
     public String printMonthAndDay(LocalDate date) {
         // TODO - return the date formatted: month & day (MM. dd.)
@@ -23,8 +21,6 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
         String formattedString = localDate.format(formatter);
         return formattedString;
     }
-
-
 
     @Override
     public boolean isAnniversaryToday(LocalDate date) {
@@ -37,8 +33,6 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
             }
     }
 
-
-
     @Override
     public int calculateAgeInYears(LocalDate birthday) {
         // TODO - return how many years age the input date 'birthday' was
@@ -46,8 +40,6 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
         int age = localDate.compareTo(birthday);
         return age;
     }
-
-
 
     @Override
     public int calculateDaysToNextAnniversary(LocalDate date) {
@@ -63,15 +55,11 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
         return days;
     }
 
-
-
     public static void main(String[] args) {
 
         new BirthdayWithLocalDate().run();
 
     }
-
-
 
     private void run() {
 
