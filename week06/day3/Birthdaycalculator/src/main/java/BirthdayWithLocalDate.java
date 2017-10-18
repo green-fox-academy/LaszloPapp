@@ -52,6 +52,8 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
     @Override
     public int calculateDaysToNextAnniversary(LocalDate date) {
         // TODO - the number of days remaining to the next anniversary of 'date' (e.g. if tomorrow, return 1)
+        LocalDate localDate = LocalDate.now();
+        
         return 0;
     }
 
