@@ -8,7 +8,7 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
     @Override
     public LocalDate parseDate(String str) {
         // TODO - return with the parsed date; format is: yyyy-MM-dd
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
         LocalDate localDate = LocalDate.parse(str,formatter);
         return localDate;
     }
