@@ -1,0 +1,19 @@
+{
+  "exercises": {
+    "Bunny1.java": "",
+    "Bunny2.java": "",
+    "Counter.java": "",
+    "Fibonacci.java": "",
+    "NumberAdder.java": "",
+    "Power.java": "",
+    "Refactorio.java": "",
+    "String1.java": "",
+    "String2.java": "",
+    "String3.java": "",
+    "SumDigit.java": ""
+  },
+  "lang": "java",
+  "repo": "teaching-materials",
+  "workshop-path": "workshop/recursion",
+  "workshop-url": "https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/recursion/java.md"
+}

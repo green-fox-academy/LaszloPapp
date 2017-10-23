@@ -1,0 +1,24 @@
+{
+  "exercises": {
+    "CopyFile.java": "",
+    "CountLines.java": "",
+    "DivideByZero.java": "",
+    "Doubled.java": "",
+    "EncodedLines.java": "",
+    "Lottery.java": "",
+    "PrintEachLine.java": "",
+    "ReversedLines.java": "",
+    "ReversedOrder.java": "",
+    "WriteMultipleLines.java": "",
+    "WriteSingleLine.java": "",
+    "duplicated-chars.txt": "",
+    "encoded-lines.txt": "",
+    "otos.csv": "",
+    "reversed-lines.txt": "",
+    "reversed-order.txt": ""
+  },
+  "lang": "java",
+  "repo": "teaching-materials",
+  "workshop-path": "workshop/file-manipulations",
+  "workshop-url": "https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/file-manipulations/java.md"
+}

@@ -1,0 +1,29 @@
+{
+  "exercises": {
+    "CenterBoxFunction.java": "",
+    "CenteredSquare.java": "",
+    "Checkerboard.java": "",
+    "ColoredBox.java": "",
+    "ConnectTheDots.java": "",
+    "Diagonals.java": "",
+    "EnvelopeStar.java": "",
+    "FourRectangles.java": "",
+    "FunctionToCenter.java": "",
+    "GoToCenter.java": "",
+    "HorizontalLines.java": "",
+    "LineInTheMiddle.java": "",
+    "LinePlay.java": "",
+    "LinePlayQuarters.java": "",
+    "PositionSquare.java": "",
+    "PurpleSteps.java": "",
+    "PurpleSteps3d.java": "",
+    "RainbowBoxFunction.java": "",
+    "StarryNight.java": "",
+    "SuperHexagon.java": "",
+    "Triangles.java": ""
+  },
+  "lang": "java",
+  "repo": "teaching-materials",
+  "workshop-path": "workshop/drawing",
+  "workshop-url": "https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/java.md"
+}
