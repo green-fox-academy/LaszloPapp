@@ -4,12 +4,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 @RestController
 public class HelloMe {
 
+    AtomicLong counter = new AtomicLong(1);
+
     @RequestMapping(value = "/greetingMe")
     public Greeting myname(@RequestParam("name")String name){
-        Greeting greeting = new Greeting(1, "Hello" ,name);
+
+        Greeting greeting = new Greeting(counter.getAndIncrement(), "Hello" ,name);
         return greeting;
     }
 }
