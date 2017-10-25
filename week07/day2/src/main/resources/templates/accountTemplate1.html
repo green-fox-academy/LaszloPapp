@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<table>
+    <tr>
+        <th>INDEX</th>
+        <th>NAME</th>
+        <th>BALANCE</th>
+        <th>TYPE</th>
+        <th>ISKING?</th>
+    </tr>
+    <tr th:each="accountok,iterStat : ${account}">
+        <td th:text="${iterStat.count}" ></td>
+        <td th:text="${accountok.name}" ></td>
+        <td th:text="${accountok.balance}" ></td>
+        <td th:text="${accountok.animalType}" ></td>
+        <td> th:text="${accountok.isKing}" ></td>
+    </tr>
+</table>
+
+</body>
+</html>
