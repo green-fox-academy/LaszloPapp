@@ -10,19 +10,18 @@ public class AddToDo {
 
     public static void addToDo() {
 
-        System.out.println("ejj");
         System.out.println("Add a task for the list!");
         Scanner scTask = new Scanner(System.in);
         String inputAdd = scTask.next();
 
         List<String> todoStr;
-        Path mypath = Paths.get("data.txt");
+        Path mypath = Paths.get("C:\\Users\\Gemini006\\greenfox\\gemini1701\\week06\\day5\\src\\main\\java\\data.txt");
 
         try {
             todoStr = Files.readAllLines(mypath);
             String id = Integer.toString(todoStr.size() + 1);
-            String fos =id+ "-" + inputAdd;
-            byte[] tomb = fos.getBytes();
+            String writeIn = System.getProperty("line.separator") + id + " - " + inputAdd;
+            byte[] tomb = writeIn.getBytes();
             Files.write(mypath, tomb, StandardOpenOption.APPEND );
         } catch (IOException e) {
             e.getMessage();

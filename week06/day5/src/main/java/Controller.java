@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,7 +6,7 @@ import java.util.Scanner;
 
 public class Controller implements Manipulation {
 
-    public static void controlToDo() {
+    public static void controlToDo() throws IOException {
 
         System.out.println("Choose an option!");
         Scanner sc = new Scanner(System.in);

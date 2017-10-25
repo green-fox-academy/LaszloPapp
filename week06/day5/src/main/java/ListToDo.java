@@ -6,7 +6,6 @@ import java.util.List;
 public class ListToDo {
 
     public static void listToDo() {
-        System.out.println("ejjList");
         List<String> todoStr = null;
 
         try {
