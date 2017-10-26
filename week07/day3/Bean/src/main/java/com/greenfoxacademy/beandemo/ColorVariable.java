@@ -1,14 +1,13 @@
 package com.greenfoxacademy.beandemo;
-import javafx.print.PrintColor;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class HelloWorldConfig{
+public class ColorVariable {
 
     @Bean
-    public HelloWorld helloWorld() {
-        return new HelloWorld();
+    public MyColor redColor(){
+        return new RedColor();
     }
-
 }
