@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div>
+<a href="index">Information</a>
+</div>
+<img src="greenfox.png" />
+<tr th:each="rokak,iterStat : ${fox}">
+<h3 th:text="'This is ' + ${rokak.name} + ' eats ' + ${rokak.food}+ ' drinks ' + ${rokak.drink} + ' he knows ' + ${rokak.trick}"></h3>
+</tr>
+<h1>Known tricks</h1>
+</body>
+</html>

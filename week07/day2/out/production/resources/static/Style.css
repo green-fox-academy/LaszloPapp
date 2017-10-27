@@ -1,0 +1,21 @@
+body {
+    background-color: dimgrey;
+    background-image: url("http://oxfordstudent.com/wp-content/uploads/2016/01/unnamed.png");
+    box-sizing: border-box;
+}
+
+h1 {
+    float: left;
+    font-style: oblique;
+}
+
+table{
+    padding-left: inherit;
+    font-family: sans-serif;
+    margin: 10px 0px 0px 0px;
+    font-size: medium;
+    float: right;
+    font-style: oblique;
+}
+
+

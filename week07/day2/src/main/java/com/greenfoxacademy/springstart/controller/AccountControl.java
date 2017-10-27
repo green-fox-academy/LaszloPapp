@@ -10,10 +10,11 @@ import java.util.ArrayList;
 @Controller
 public class AccountControl {
 
-    BankAccount bankAccount0 = new BankAccount("Simba","2000","Lion",true);
-    BankAccount bankAccount1 = new BankAccount("Lanymacska", "2000", "Lion",false);
-    BankAccount bankAccount2 = new BankAccount("Timon", "2000", "foldikutya",false);
-    BankAccount bankAccount3 = new BankAccount("Pumpa", "2000", "malac",false);
+    BankAccount bankAccount0 = new BankAccount("Symba","2000","Lion",true,true);
+    BankAccount bankAccount1 = new BankAccount("Nala", "1000", "Lion",false,true);
+    BankAccount bankAccount2 = new BankAccount("Timon", "500", "Surikata",false,true);
+    BankAccount bankAccount3 = new BankAccount("Pumba", "600", "Pig",false,true);
+    BankAccount bankAccount4 = new BankAccount("Scar","5000","Lion",false,false);
 
     @RequestMapping(value = "/account", method = RequestMethod.GET)
     public String bankAccount(Model model){
@@ -33,6 +34,7 @@ public class AccountControl {
         accounts.add(bankAccount1);
         accounts.add(bankAccount2);
         accounts.add(bankAccount3);
+        accounts.add(bankAccount4);
         model.addAttribute("account", accounts);
         return "accountTemplate1";
     }

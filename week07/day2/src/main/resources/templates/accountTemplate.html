@@ -7,11 +7,9 @@
 </head>
 <body>
 <h1>Account details:</h1>
-
                      <td th:text="'Name: ' + ${account.name}" />
                      <td th:text="'Balance: ' + ${#numbers.formatDecimal(account.balance, 3, 2)} + 'zebra'" />
                      <td th:text="'Type: ' + ${account.animalType}"/>
-        
 th:utext
 th:text
 </body>
