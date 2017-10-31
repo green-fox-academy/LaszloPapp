@@ -18,6 +18,6 @@ public class EmbedlisttodoApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		toDoRepo.save(new ToDo("task"));
+		toDoRepo.save(new ToDo("lofasz"));
 	}
 }

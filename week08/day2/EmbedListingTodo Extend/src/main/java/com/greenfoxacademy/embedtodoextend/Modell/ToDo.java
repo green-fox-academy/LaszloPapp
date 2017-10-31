@@ -1,4 +1,4 @@
-package com.greenfoxacademy.embedlisttodo.Model;
+package com.greenfoxacademy.embedtodoextend.Modell;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
