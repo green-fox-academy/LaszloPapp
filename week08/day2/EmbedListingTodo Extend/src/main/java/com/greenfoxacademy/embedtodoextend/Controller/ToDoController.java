@@ -1,4 +1,5 @@
 package com.greenfoxacademy.embedtodoextend.Controller;
+import com.greenfoxacademy.embedtodoextend.Modell.ToDo;
 import com.greenfoxacademy.embedtodoextend.Repository.ToDoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ public class ToDoController {
 
     @Autowired
     ToDoRepo toDoRepo;
+    ToDo toDo;
 
     @RequestMapping("/save")
     public String list(Model model){
