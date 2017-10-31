@@ -2,6 +2,8 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/todoStyle.css}" />
+    <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     <title>Title</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
         <td th:text="${todo.title}" ></td>
         <td th:text="${todo.isUrgent()}" ></td>
         <td th:text="${todo.isDone()}" ></td>
-       
+
     </tr>
 </table>
 </body>

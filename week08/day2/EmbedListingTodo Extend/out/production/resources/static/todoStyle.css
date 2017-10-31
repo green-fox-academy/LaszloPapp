@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: antiquewhite;
+}
+
+
+table {
+    font-style: italic;
+    text-align: center;
+    color: antiquewhite;
+}
+
+table, th, td {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: darkred;
+    border-right-width: 30px;
+    border-right-style: solid;
+    border-right-color: darkred;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: darkred;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: darkred;
+}
+
