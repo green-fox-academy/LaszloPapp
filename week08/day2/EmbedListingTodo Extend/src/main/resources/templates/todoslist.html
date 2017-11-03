@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" th:href="@{/todoStyle.css}" />
     <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
-    <title>Title</title>
+    <title>List of Todos</title>
 </head>
 <body>
 <h1>Todos for today:</h1>
@@ -15,7 +15,7 @@
         <th>URGENT?</th>
         <th>DONE?</th>
     </tr>
-    <tr th:each="todo : ${save}">
+    <tr th:each="todo : ${list}">
         <td th:text="${todo.id}" ></td>
         <td th:text="${todo.title}" ></td>
         <td th:text="${todo.isUrgent()}" ></td>

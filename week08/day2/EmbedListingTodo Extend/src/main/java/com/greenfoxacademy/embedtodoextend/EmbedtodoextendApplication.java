@@ -17,7 +17,7 @@ public class EmbedtodoextendApplication implements CommandLineRunner {
 
 		@Override
 		public void run (String...args) throws Exception {
-			toDoRepo.save(new ToDo("stufftodo"));
+
 		}
 	}
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Adding posts</title>
+</head>
+<body>
+
+<div th:fragment="navbar" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""><a href="/">BACK TO THE MAIN PAGE</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1> Add new Post </h1>
+<form th:action="@{/add}" th:object="${add}" method="post">
+    <input type="text"  th:field="*{content}"/>
+    <button type="submit" value="content" >Add</button>
+</form>
+</body>
+</html>

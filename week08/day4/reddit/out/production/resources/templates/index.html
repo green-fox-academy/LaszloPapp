@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/postStyle.css}" />
+    <link href="../static/css/Layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+    <title>Reddit index</title>
+</head>
+<body>
+
+<div th:fragment="navbar" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""><a href="/add">ADD POST</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Posts</h1>
+<table>
+    <tr>
+        <th>SCORE</th>
+        <th>ACTIONS</th>
+        <th>CONTENT</th>
+    </tr>
+    <tr th:each="post : ${list}">
+        <td th:text="${post.score}" ></td>
+
+        <td> <a th:href="@{/{id}/increase(id=${post.id})}">+</a> <a th:href="@{/{id}/decrease(id=${post.id})}">-</a> </td>
+
+        <td th:text="${post.content}" ></td>
+    </tr>
+</table>
+</body>
+</html>

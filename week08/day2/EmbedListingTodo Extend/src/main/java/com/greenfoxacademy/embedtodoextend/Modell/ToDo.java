@@ -1,15 +1,14 @@
 package com.greenfoxacademy.embedtodoextend.Modell;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class ToDo {
 
+    public ToDo() {}
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private Long id;
     String title;
     boolean isUrgent = false;
     boolean isDone = false;
@@ -18,14 +17,11 @@ public class ToDo {
         this.title = s;
     }
 
-    public ToDo() {
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
