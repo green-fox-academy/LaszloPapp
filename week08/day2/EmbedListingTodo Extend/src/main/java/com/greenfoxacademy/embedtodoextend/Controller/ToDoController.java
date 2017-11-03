@@ -58,42 +58,5 @@ public class ToDoController {
         toDoRepo.save(toDo);
         return "redirect:/";
     }
-
-
-
-/*
-    @RequestMapping("/list")
-    @GetMapping("/list")
-    public String list(Model model){
-        model.addAttribute("list", toDoRepo.findAll());
-        return "todoslist";
-    }
-
-    @PostMapping("/list")
-    public String save(@ModelAttribute ToDo toDo){
-            toDoRepo.save(toDo);
-            return "redirect:/todo/list";
-    }
-
-  //  @GetMapping("/add")
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String add ( Model model){
-        model.addAttribute("add", new ToDo());
-        System.out.println(toDoRepo.findAll());
-        return "addTodo";
-    }
-
-    @DeleteMapping(value = "/{id}/delete")
-    public String delete(@PathVariable long id){
-        toDoRepo.delete(id);
-        return "redirect:/todo/list";
-    }
-
-    @GetMapping("/{id}/edit")
-    public  String edit(@PathVariable long id, Model model){
-        model.addAttribute("edit", toDoRepo.findOne(id));
-        return "editTodo";
-    } */
-
-    }
+}
 

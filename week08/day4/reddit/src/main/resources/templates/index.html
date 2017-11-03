@@ -26,6 +26,7 @@
         <th>SCORE</th>
         <th>ACTIONS</th>
         <th>CONTENT</th>
+        <th>DATE</th>
     </tr>
     <tr th:each="post : ${list}">
         <td th:text="${post.score}" ></td>
@@ -33,6 +34,8 @@
         <td> <a th:href="@{/{id}/increase(id=${post.id})}">+</a> <a th:href="@{/{id}/decrease(id=${post.id})}">-</a> </td>
 
         <td th:text="${post.content}" ></td>
+        <td th:text="${post.date}" ></td>
+        <td> <a th:href="@{/{id}/delete(id=${post.id})}">DELETE</a> </td>
     </tr>
 </table>
 </body>
