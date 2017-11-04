@@ -5,7 +5,6 @@
     <title>Adding posts</title>
 </head>
 <body>
-
 <div th:fragment="navbar" class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-inner">
         <div class="container">
@@ -17,7 +16,6 @@
         </div>
     </div>
 </div>
-
 <h1> Add new Post </h1>
 <form th:action="@{/add}" th:object="${add}" method="post">
     <input type="text"  th:field="*{content}"/>

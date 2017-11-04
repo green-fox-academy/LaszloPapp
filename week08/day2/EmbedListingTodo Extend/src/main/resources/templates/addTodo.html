@@ -5,8 +5,19 @@
     <title>Adding Todo</title>
 </head>
 <body>
+<div th:fragment="navbar" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""><a href="/todo/">MAIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <h1> Add new Todo </h1>
-<form th:action="@{/add}" th:object="${add}" method="post">
+<form th:action="@{/todo/add}" th:object="${add}" method="post">
     <input type="text"  th:field="*{title}"/>
     <button type="submit" value="title" >Add</button>
 </form>

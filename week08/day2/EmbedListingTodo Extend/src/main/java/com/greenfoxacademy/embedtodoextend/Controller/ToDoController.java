@@ -4,29 +4,22 @@ import com.greenfoxacademy.embedtodoextend.Repository.ToDoRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import javax.xml.ws.RequestWrapper;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-//@RequestMapping("/todo")
+@RequestMapping("/todo")
 public class ToDoController {
 
     @Autowired
     ToDoRepo toDoRepo;
-    ToDo toDo;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String land(Model model) {
         model.addAttribute("list", toDoRepo.findAll());
         return "todoslist";
-    }
-
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public String list() {
-        return "redirect:/";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
@@ -38,13 +31,13 @@ public class ToDoController {
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String addPost(@ModelAttribute ToDo toDo) {
         toDoRepo.save(toDo);
-        return "redirect:/";
+        return "redirect:/todo/";
     }
 
-    @RequestMapping(value = "{id}/delete", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}/delete", method = RequestMethod.GET)
     public String delete(@PathVariable long id) {
         toDoRepo.delete(id);
-        return "redirect:/";
+        return "redirect:/todo/";
     }
 
     @RequestMapping(value = "/{id}/edit", method = RequestMethod.GET)
@@ -53,10 +46,10 @@ public class ToDoController {
         return "editTodo";
     }
 
-    @RequestMapping(value = "{id}/edit", method = RequestMethod.POST)
-    public String editSave(@PathVariable Long id, @ModelAttribute ToDo toDo) {
+    @RequestMapping(value = "/{id}/edit", method = RequestMethod.POST)
+    public String editSave(@ModelAttribute ToDo toDo) {
         toDoRepo.save(toDo);
-        return "redirect:/";
+        return "redirect:/todo/";
     }
 }
 

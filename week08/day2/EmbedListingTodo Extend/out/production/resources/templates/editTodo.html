@@ -5,13 +5,21 @@
     <title>Edit your todo</title>
 </head>
 <body>
-<form action="" method="post">
-</form>
-<td>
-    <form action="#" th:action="@{{id}/edit'(id=${id})}" th:object="${edit}">
-        <input type="text" th:field="*{title}" />
-        <p><input type="submit" value="Save" /></p>
-    </form>
-</td>
+<div th:fragment="navbar" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""><a href="/todo/">MAIN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <h1> Add new Todo </h1>
+        <form th:action="@{/todo/{id}/edit (id=${id})}" th:object="${edit}" method="post">
+            <input type="text" th:field="*{title}" />
+            <button type="submit" value="title" >SAVE</button>
+        </form>
 </body>
 </html>

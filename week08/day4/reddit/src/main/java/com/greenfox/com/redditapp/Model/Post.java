@@ -1,6 +1,5 @@
 package com.greenfox.com.redditapp.Model;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +18,6 @@ public class Post {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     public LocalDate date;
-
 
     public Post() {
         this.date = LocalDate.now();
