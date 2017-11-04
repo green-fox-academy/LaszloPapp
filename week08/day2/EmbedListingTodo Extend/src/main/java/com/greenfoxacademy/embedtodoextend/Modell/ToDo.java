@@ -4,17 +4,22 @@ import javax.persistence.*;
 @Entity
 public class ToDo {
 
-    public ToDo() {}
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    public Long id;
     String title;
-    boolean isUrgent = false;
-    boolean isDone = false;
+    Boolean urgent;
+    Boolean done;
+
+    public ToDo() {
+        this.urgent = false;
+        this.done = false;
+    }
 
     public ToDo(String s) {
         this.title = s;
+        this.urgent = false;
+        this.done = false;
     }
 
     public Long getId() {
@@ -34,19 +39,19 @@ public class ToDo {
     }
 
     public boolean isUrgent() {
-        return isUrgent;
+        return urgent;
     }
 
-    public void setUrgent(boolean urgent) {
-        isUrgent = urgent;
+    public void setUrgent(Boolean urgent) {
+        this.urgent = urgent;
     }
 
     public boolean isDone() {
-        return isDone;
+        return done;
     }
 
-    public void setDone(boolean done) {
-        isDone = done;
+    public void setDone(Boolean done) {
+        this.done = done;
     }
 
     @Override

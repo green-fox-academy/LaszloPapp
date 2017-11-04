@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" th:href="@{/todoStyle.css}" />
-    
+
     <title>List of Todos</title>
 </head>
 <body>
@@ -23,8 +23,8 @@
     <tr>
         <th>ID</th>
         <th>TITLE</th>
-        <th>URGENT?</th>
-        <th>DONE?</th>
+        <th>URGENT</th>
+        <th>DONE</th>
     </tr>
     <tr th:each="todo : ${list}">
         <td th:text="${todo.id}" ></td>

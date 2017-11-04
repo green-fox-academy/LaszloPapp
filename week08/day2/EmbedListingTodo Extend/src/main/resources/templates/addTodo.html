@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/todoStyle.css}" />
     <title>Adding Todo</title>
 </head>
 <body>
@@ -16,10 +17,10 @@
         </div>
     </div>
 </div>
-<h1> Add new Todo </h1>
+<h1> ADD NEW TODO </h1>
 <form th:action="@{/todo/add}" th:object="${add}" method="post">
     <input type="text"  th:field="*{title}"/>
-    <button type="submit" value="title" >Add</button>
+    <button type="submit" value="title" >ADD</button>
 </form>
 </body>
 </html>

@@ -1,21 +1,25 @@
+body{
+    background-color: goldenrod;
+}
+
 table {
     font-style: oblique;
     text-align: center;
-
+    color: green;
+    font-size: x-large;
 }
 
-
 table, th, td {
-    border-top-width: 1px;
+    border-top-width: 2px;
     border-top-style: solid;
-    border-top-color: black;
-    border-right-width: 1px;
+    border-top-color: dimgrey;
+    border-right-width: 2px;
     border-right-style: solid;
-    border-right-color: black;
-    border-left-width: 1px;
+    border-right-color: dimgrey;
+    border-left-width: 2px;
     border-left-style: solid;
-    border-left-color: black;
-    border-bottom-width: 1px;
+    border-left-color: dimgrey;
+    border-bottom-width: 2px;
     border-bottom-style: solid;
-    border-bottom-color: black;
+    border-bottom-color: dimgrey;
 }
