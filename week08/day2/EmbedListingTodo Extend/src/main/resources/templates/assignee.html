@@ -27,6 +27,8 @@
             <td th:text="${ass.id}" ></td>
             <td th:text="${ass.name}" ></td>
             <td th:text="${ass.email}" ></td>
+            <td> <a th:href="@{/todo/{id}/deleteAss(id=${ass.id})}">DELETE</a> </td>
+            <td> <a th:href="@{/todo/{id}/editAss(id=${ass.id})}">EDIT</a> </td>
         </tr>
     </table>
 </div>
