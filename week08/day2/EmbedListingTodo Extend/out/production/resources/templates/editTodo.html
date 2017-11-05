@@ -2,27 +2,22 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" th:href="@{/todoStyle.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Edit your todo</title>
 </head>
-<body>
-<div th:fragment="navbar" class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class=""><a href="/todo/">MAIN</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<body style="background-color: goldenrod">
+<div class="container-fluid" style="background-color: black">
+    <nav class="nav justify-content-left">
+        <a class="nav-link active" href="/todo/" style="font-size: x-large">Back to the Main</a>
+    </nav>
 </div>
-    <h1> EDIT TODO </h1>
+    <h3>Edit Todo</h3>
         <form th:action="@{/todo/{id}/edit (id=${id})}" th:object="${edit}" method="post">
             <input type="text" th:field="*{title}" />
             <input type="checkbox" name="urgent" th:checked="*{urgent}" th:text="URGENT" />
             <input type="checkbox" name="done" th:checked="*{done}" th:text="DONE" />
-            <button type="submit" value="title" >SAVE</button>
+            <button style="border-radius: 8px" type="submit" value="title" >SAVE</button>
         </form>
 </body>
 </html>

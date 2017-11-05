@@ -1,5 +1,7 @@
 package com.greenfoxacademy.embedtodoextend.Modell;
+import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class ToDo {
@@ -11,7 +13,11 @@ public class ToDo {
     Boolean urgent;
     Boolean done;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    public LocalDate date;
+
     public ToDo() {
+        this.date = LocalDate.now();
         this.urgent = false;
         this.done = false;
     }
