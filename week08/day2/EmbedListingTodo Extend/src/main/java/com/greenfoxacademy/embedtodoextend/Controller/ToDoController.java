@@ -16,7 +16,7 @@ public class ToDoController {
     @Autowired
     ToDoRepo toDoRepo;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String land(Model model) {
         model.addAttribute("list", toDoRepo.findAll());
         return "todoslist";

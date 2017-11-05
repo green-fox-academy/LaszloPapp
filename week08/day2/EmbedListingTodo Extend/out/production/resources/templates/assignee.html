@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>List of Assignees</title>
+</head>
+<body style="background-color: goldenrod">
+<div class="container-fluid" style="background-color: black">
+    <nav class="nav justify-content-left">
+        <a class="nav-link active" href="/todo/" style="font-size: x-large">Back to the Main</a>
+        <a class="nav-link active" href="/todo/addass" style="font-size: x-large">Add additional Assignees</a>
+    </nav>
+</div>
+<h1 style="float: left">Assignees</h1>
+<div class="container-fluid" style="background-color: goldenrod">
+    <table class="table table-hover table-bordered table-striped table-dark table table-sm ">
+        <thead>
+        <tr>
+            <th scope="col" >ID</th>
+            <th scope="col" >NAME</th>
+            <th scope="col" >E-MAIL</th>
+        </tr>
+        </thead>
+        <tr th:each="ass : ${assignee}">
+            <td th:text="${ass.id}" ></td>
+            <td th:text="${ass.name}" ></td>
+            <td th:text="${ass.email}" ></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
