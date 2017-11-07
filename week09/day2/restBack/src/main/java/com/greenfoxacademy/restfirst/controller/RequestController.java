@@ -14,12 +14,11 @@ public class RequestController {
     @RequestMapping(value = "/doubling", method = RequestMethod.GET)
     public Object doublingProvider(@RequestParam(required = false) Integer input){
         Error errorDoub = new Error("Please provide an input!");
-        System.out.println(input);
+        DoubleObject doub = new DoubleObject(input);
 
         if(input == null){
             return errorDoub;
         }else {
-            DoubleObject doub = new DoubleObject(input);
             return doub;
         }
     }
@@ -37,5 +36,12 @@ public class RequestController {
         }else {
             return petya;
         }
+    }
+
+    @RequestMapping(value = "/appenda/{appendable}", method = RequestMethod.GET)
+    public Object append(@PathVariable String appendable){
+        Map<String,String> appenda = new HashMap();
+        appenda.put("appended",appendable + "a");
+        return appenda;
     }
 }
