@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/")
 public class UserController {
 
     @Autowired
     UserService userService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model){
         model.addAttribute("user", new User());
         return "login";
@@ -22,11 +23,13 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@ModelAttribute User user){
-        return "redirect:/" + userService.login("laci",user);
+        return "redirect:/login" + userService.login("laci",user);
     }
 
-    @RequestMapping(value = "/accessDenied/", method = RequestMethod.GET)
-    public String accesDenied() {
-        return "accessDenied";
+    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    public String accessDenied() {
+        return "/accessDenied";
     }
+
+
 }

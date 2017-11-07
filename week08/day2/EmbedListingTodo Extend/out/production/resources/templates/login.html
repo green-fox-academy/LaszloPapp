@@ -2,15 +2,23 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Login</title>
 </head>
-<body>
-<h1>Login</h1>
-    <form action="/login" th:object="${user}" method="post">
-        <input type="text" th:field="*{name}"/>
-        <input type="text" th:field="*{password}"/>
-        <input type="hidden" th:field="*{id}"/>
-        <input type="submit" value="Login"/>
-    </form>
+<body style= "background-color: goldenrod">
+<h1 style= "float: left">Login</h1>
+<div class= "container-fluid" style="background-color: goldenrod">
+    <table class="table table-hover table-bordered table-striped table-dark">
+        <thead>
+            <form action="/login" th:object="${user}" method="post">
+                <input style="align-items: center" type="text" th:field="*{name}"/>
+                <input style="align-items: center" type="text" th:field="*{password}"/>
+                <input style="align-items: center" type="hidden" th:field="*{id}"/>
+                <input style="align-items: center" type="submit" value="Login"/>
+            </form>
+        </thead>
+    </table>
+</div>
 </body>
 </html>

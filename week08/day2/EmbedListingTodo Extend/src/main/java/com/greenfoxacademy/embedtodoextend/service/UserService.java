@@ -12,9 +12,9 @@ public class UserService {
 
     public String login(String name, User user) {
         if (user.getPassword().equals(userRepo.findUserByName(name).getPassword())) {
-            return "/todo/todoslist";
+            return "/todo/";
         }else{
-            return "/accessDenied/";
+            return "accessDenied";
         }
     }
 }
