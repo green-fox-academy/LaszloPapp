@@ -2,27 +2,17 @@ package com.greenfoxacademy.restfirst.model;
 
 public class Error {
 
-    String name;
-    String description;
+    String error;
 
-    public Error(String name, String description) {
-        this.name = name;
-        this.description = description;
+    public Error(String error) {
+        this.error = error;
     }
 
-    public String getName() {
-        return name;
+    public String getError() {
+        return error;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setError(String error) {
+        this.error = error;
     }
 }
