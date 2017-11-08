@@ -118,4 +118,24 @@ public class RestfirstApplicationTests {
 				.andExpect(jsonPath("$.result", is(28)));
 	}
 
+	@Test
+	public void testDoUntilFactorSuccess() throws Exception {
+		mockMvc.perform(post("/dountil/factor")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("{\"until\": \"7\"}"))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.result", is(5040)));
+	}
+
+	@Test
+	public void testDoUntilNotNumberProvided() throws Exception {
+		mockMvc.perform(post("/dountil/sum")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(""))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.error", is("Please provide a number!")));
+	}
+
 }
