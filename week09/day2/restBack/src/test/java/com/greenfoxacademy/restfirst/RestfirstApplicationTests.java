@@ -101,4 +101,11 @@ public class RestfirstApplicationTests {
 				.andExpect(jsonPath("$.appended", is("kutya")));
 	}
 
+	@Test
+	public void testAppendaIsNotFound() throws Exception {
+		mockMvc.perform(get("/appenda/")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isNotFound());
+	}
+
 }
