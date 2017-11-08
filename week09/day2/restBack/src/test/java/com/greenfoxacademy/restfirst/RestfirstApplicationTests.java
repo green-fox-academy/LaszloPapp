@@ -55,4 +55,13 @@ public class RestfirstApplicationTests {
 				.andExpect(content().contentType(contentType))
 				.andExpect(jsonPath("$.error", is("Please provide an input!")));
 	}
+
+	@Test
+	public void tesZeroDoubling() throws Exception {
+		mockMvc.perform(get("/doubling?input=0")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.result", is(0)));
+	}
 }
