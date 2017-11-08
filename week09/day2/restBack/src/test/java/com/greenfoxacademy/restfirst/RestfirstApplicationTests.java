@@ -64,4 +64,41 @@ public class RestfirstApplicationTests {
 				.andExpect(content().contentType(contentType))
 				.andExpect(jsonPath("$.result", is(0)));
 	}
+
+	@Test
+	public void testNameNull() throws Exception {
+		mockMvc.perform(get("/greeter?name=")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.error", is("Please provide a title!")));
+	}
+
+	@Test
+	public void testtitlenull() throws Exception {
+		mockMvc.perform(get("/greeter?title=")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.error", is("Please provide a name!")));
+	}
+
+	@Test
+	public void testName() throws Exception {
+		mockMvc.perform(get("/greeter?name=petike")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.error", is("Please provide a title!")));
+	}
+
+	@Test
+	public void testTitle() throws Exception {
+		mockMvc.perform(get("/greeter?title=student")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.error", is("Please provide a name!")));
+	}
+	
 }
