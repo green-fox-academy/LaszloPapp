@@ -66,7 +66,7 @@ public class RestfirstApplicationTests {
 	}
 
 	@Test
-	public void testNameNull() throws Exception {
+	public void testTitleNull() throws Exception {
 		mockMvc.perform(get("/greeter?name=petike")
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
@@ -75,7 +75,7 @@ public class RestfirstApplicationTests {
 	}
 
 	@Test
-	public void testtitlenull() throws Exception {
+	public void testNamenull() throws Exception {
 		mockMvc.perform(get("/greeter?title=student")
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
@@ -84,12 +84,21 @@ public class RestfirstApplicationTests {
 	}
 
 	@Test
-	public void testName() throws Exception {
+	public void testNameTitle() throws Exception {
 		mockMvc.perform(get("/greeter?name=Petike&title=student")
 				.contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
 				.andExpect(content().contentType(contentType))
 				.andExpect(jsonPath("$.welcome_message", is("Oh, hi there Petike, my dear student!")));
+	}
+
+	@Test
+	public void testAppendaSuccess() throws Exception {
+		mockMvc.perform(get("/appenda/kuty")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.appended", is("kutya")));
 	}
 
 }
