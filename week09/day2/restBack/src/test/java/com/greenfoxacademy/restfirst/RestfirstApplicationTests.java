@@ -108,4 +108,14 @@ public class RestfirstApplicationTests {
 				.andExpect(status().isNotFound());
 	}
 
+	@Test
+	public void testDoUntilSumSuccess() throws Exception {
+		mockMvc.perform(post("/dountil/sum")
+				.contentType(MediaType.APPLICATION_JSON)
+				.content("{\"until\": \"7\"}"))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(contentType))
+				.andExpect(jsonPath("$.result", is(28)));
+	}
+
 }
