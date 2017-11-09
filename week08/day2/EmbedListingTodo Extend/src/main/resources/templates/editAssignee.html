@@ -2,21 +2,23 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
+    <link href="/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Edit Assignee Data</title>
 </head>
-<body style="background-color: goldenrod">
-<div class="container-fluid" style="background-color: black">
-    <nav class="nav justify-content-left">
-        <a class="nav-link active" href="/todo/assignee" style="font-size: x-large">Back to the Assignee List</a>
+<body style="background-color: dimgray">
+<div class="table-responsive">
+    <nav>
+        <a class="nav-link active" href="/todo/assignee">Back to the Assignee List</a>
     </nav>
 </div>
-<h3>Edit Todo</h3>
+<h1 style="color: darkblue">Edit Todo</h1>
 <form th:action="@{/todo/{id}/editAss (id=${id})}" th:object="${edit}" method="post">
-    <input type="text" th:field="*{name}" />
-    <input type="text" th:field="*{email}" />
-    <button style="border-radius: 8px" type="submit" value="title" >SAVE</button>
+    <input class="col-xs-4 input-sm" type="text" th:field="*{name}" />
+    <input class="col-xs-4 input-sm" type="text" th:field="*{email}" />
+    <button class="btn btn-info btn-lg" style="border-radius: 8px" type="submit" value="title" >SAVE</button>
 </form>
 </body>
 </html>

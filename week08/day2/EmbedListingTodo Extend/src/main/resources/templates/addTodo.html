@@ -2,26 +2,24 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
+    <link href="/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Adding Todo</title>
 </head>
-<body style="background-color: goldenrod">
-<div class="container-fluid" style="background-color: black">
-    <nav class="nav justify-content-left">
-        <a class="nav-link active" href="/todo/" style="font-size: x-large">Back to the Main</a>
+<body style="background-color: dimgray">
+<div class="table-responsive">
+    <nav>
+        <a class="nav-link active" href="/todo/">Back to the Main</a>
     </nav>
 </div>
-<h3 style="float: left">Add new todo</h3>
-<div class="container-fluid" style="background-color: goldenrod">
-    <table class="table table-hover table-bordered table-striped table-dark">
-        <thead>
+<h1 style="color: darkblue">Add new todo</h1>
+<div class="table-responsive">
 <form th:action="@{/todo/add}" th:object="${add}" method="post">
-    <input style="align-items: center" type="text"  th:field="*{title}"/>
-    <button style="border-radius: 8px" type="submit" value="title" >ADD</button>
+    <input class="col-xs-4 input-sm" style="align-items: center" type="text"  th:field="*{title}"/>
+    <button class="btn btn-info btn-lg" type="submit" value="submit" >ADD</button>
 </form>
-    </thead>
-    </table>
 </div>
 </body>
 </html>

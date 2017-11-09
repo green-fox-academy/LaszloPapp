@@ -1,0 +1,28 @@
+
+div {
+    background-color: black;
+}
+
+nav {
+    justify-content: center;
+    font-size: x-large;
+    font-style: italic;
+    padding-left inherit;
+    background: center;
+    background-color: black;
+    color: firebrick;
+}
+
+.table{
+    color: darkgoldenrod;
+    font-size: large;
+}
+
+h1 {
+    font-style: italic;
+}
+
+button {
+    border-radius: 8px
+}
+
