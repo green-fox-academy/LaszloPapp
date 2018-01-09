@@ -8,7 +8,7 @@ public class Filtering {
     ArrayList<Integer> arrayListInput = new ArrayList<>(Arrays.asList(1, 11, 34, 11, 52, 61, 1, 34));
     System.out.println(listChecker(arrayListInput));
   }
-  
+
     static ArrayList<Integer> listChecker(ArrayList<Integer> input) {
 
     ArrayList<Integer> result = new ArrayList<>();

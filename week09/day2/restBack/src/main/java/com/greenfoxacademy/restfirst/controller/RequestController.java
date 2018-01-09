@@ -54,6 +54,4 @@ public class RequestController {
     public Error doError(){
         return new Error("Please provide a number!");
     }
-
-
 }

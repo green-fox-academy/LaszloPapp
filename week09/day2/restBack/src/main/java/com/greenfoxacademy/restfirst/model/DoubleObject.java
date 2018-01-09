@@ -6,7 +6,6 @@ public class DoubleObject {
     int result;
 
     public DoubleObject(int input) {
-        this.input = input;
         this.result = input * 2;
     }
 
