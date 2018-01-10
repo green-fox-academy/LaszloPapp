@@ -9,7 +9,7 @@ public class Filtering {
     System.out.println(listChecker(arrayListInput));
   }
 
-    static ArrayList<Integer> listChecker(ArrayList<Integer> input) {
+  public static ArrayList<Integer> listChecker(ArrayList<Integer> input) {
 
     ArrayList<Integer> result = new ArrayList<>();
     for (int i = 0; i < input.size(); i++) {

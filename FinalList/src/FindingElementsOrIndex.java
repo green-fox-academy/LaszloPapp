@@ -15,7 +15,7 @@ public class FindingElementsOrIndex {
     }
   }
 
-  static int stringFinder(String indexLong, String indexShort){
+  public static int stringFinder(String indexLong, String indexShort){
     int indexBack = 0;
     for (int i = 0; i < indexLong.length(); i++) {
       if(indexLong.contains(indexShort)){
