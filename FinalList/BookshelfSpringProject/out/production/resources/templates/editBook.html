@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link href="/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+    <title>Edit your books</title>
+</head>
+<body style="background-color: palegoldenrod">
+<div class="table-responsive">
+    <nav>
+        <a class="one" href="/">Back to the Main</a>
+    </nav>
+</div>
+<h1 style="color: lavenderblush">Edit Books</h1>
+<div>
+<form th:action="@{/{id}/edit (id=${id})}" th:object="${edit}" method="post">
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{author}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{title}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{description}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{isbn}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{year}" />
+    <input class="col-xs-4 input-sm" type="text" placeholder="LongDescription" th:field="*{longDescription}" />
+    <input style="size: 16px" type="checkbox" name="favourite" th:checked="*{favourite}" th:text="FAVOURITE" />
+    <button class="btn btn-info btn-lg" style="border-radius: 8px" type="submit" value="title" >SAVE</button>
+</form>
+</div>
+</body>
+</html>

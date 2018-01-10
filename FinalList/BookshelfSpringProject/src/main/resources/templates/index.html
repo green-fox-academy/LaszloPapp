@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="library.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+    <title>Manu Library</title>
+</head>
+<body style="background-color: palegoldenrod">
+<h1 style="color: lavenderblush">MANU KONYVTARA</h1>
+<div class="link">
+    <nav>
+    <a class="one" href="/addBook">Add new book</a>
+    </nav>
+</div>
+<div>
+    <form th:action="@{/title}" th:object="${search}" method="get">
+        <input type="search" name="search" placeholder="Search by Title"/>
+        <button type="submit" value="Submit">Search by title</button>
+    </form>
+
+    <form th:action="@{/author}" th:object="${search}" method="get">
+        <input type="search" name="search" placeholder="Search by Author"/>
+        <button type="submit" value="Submit">Search by author</button>
+    </form>
+
+    <form th:action="@{/isbnsearch}" th:object="${search}" method="get">
+        <input type="search" name="search" placeholder="Search by Isbn Number"/>
+        <button type="submit" value="Submit">Search by isbn</button>
+    </form>
+
+    <form th:action="@{/year}" th:object="${search}" method="get">
+        <input type="search" name="search" placeholder="Search by Release Year"/>
+        <button type="submit" value="Submit">Search by year</button>
+    </form>
+
+    <form th:action="@{/}" th:object="${search}" method="get">
+        <button type="submit" value="Submit">Refresh</button>
+    </form>
+</div>
+<table class="table table-hover table-dark" style="font-size: small">
+    <thead>
+    <tr>
+        <th scope="col" >TITLE</th>
+        <th scope="col" >AUTHOR</th>
+        <th scope="col" >DESCRIPTION</th>
+        <th><a class="nav-link active" href="/isbn">ISBN</a></th>
+        <th scope="col" >YEAR</th>
+        <th scope="col" ></th>
+        <th scope="col" ></th>
+        <th scope="col" ></th>
+        <th scope="col" ></th>
+        <th><a class="nav-link active" href="/score">SCORE</a></th>
+        <th scope="col" ></th>
+        <th><a class="nav-link active" href="/favourite">FAVOURITE</a></th>
+    </tr>
+    </thead>
+    <tr th:each="book : ${list}">
+        <td th:text="${book.title}" ></td>
+        <td> <a class="nav-link active" th:text="${book.author}" th:href="@{/{author}(author=${book.author})}"></a></td>
+        <td th:text="${book.description}" ></td>
+        <td th:text="${book.isbn}" ></td>
+        <td th:text="${book.year}" ></td>
+        <td> <a class="btn btn-danger" th:href="@{/{id}/delete(id=${book.id})}" role="button" onclick="return confirm('Are you sure?')">DELETE</a> </td>
+        <td> <a class="btn btn-default" th:href="@{/{id}/edit(id=${book.id})}" role="button">EDIT</a> </td>
+        <td> <a class="btn btn-default" th:href="@{/{id}/details(id=${book.id})}" role="button">DETAILS</a> </td>
+        <td> <a th:href="@{/{id}/increase(id=${book.id})}">+</a> <a th:href="@{/{id}/decrease(id=${book.id})}">-</a> </td>
+        <td th:text="${book.score}" ></td>
+        <td></td>
+        <td th:if="${book.isFavourite()}">*</td>
+    </tr>
+    <tr th:each="err : ${error}">
+        <td th:text="${err.error}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+    width: auto;
+    height: auto;
+    background-image: url("http://whytoread.com/wp-content/uploads/2015/03/best-books-book-youll-ever-read.jpg");
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type=search], select {
+    width: 100%;
+    height: 15px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rosybrown;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: palegoldenrod;
+}
+
+div {
+    width: 400px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+a.one{
+    color: lavenderblush;
+    font-size: large;
+}
+
+div.link{
+    width: 200px;
+}

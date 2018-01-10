@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <link href="/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+    <title>Add additional books</title>
+</head>
+<body style="background-color: palegoldenrod">
+<div class="table-responsive">
+    <nav>
+        <a class="one" href="/">Back to the Main</a>
+    </nav>
+</div>
+<h1 style="color: lavenderblush">Add new book</h1>
+<div>
+   <form th:action="@{/addBook}" style="left: auto" th:object="${addBook}" method="post">
+        <input class="col-xs-4 input-sm" type="text" placeholder="Author" th:field="*{author}" />
+        <input class="col-xs-4 input-sm" type="text" placeholder="Title" th:field="*{title}" />
+        <input class="col-xs-4 input-sm" type="text" placeholder="Description" th:field="*{description}" />
+        <input class="col-xs-4 input-sm" type="text" placeholder="Isbn" th:field="*{isbn}" />
+        <input class="col-xs-4 input-sm" type="text" placeholder="Year" th:field="*{year}" />
+        <input class="col-xs-4 input-sm" type="text" placeholder="LongDescription" th:field="*{longDescription}" />
+        <button class="btn btn-info btn-lg" type="submit" value="submit" >ADD</button>
+    </form>
+</div>
+</body>
+</html>
