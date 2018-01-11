@@ -15,11 +15,11 @@ public class FindingElementsOrIndex {
     }
   }
 
-  public static int stringFinder(String indexLong, String indexShort){
+  public static int stringFinder(String stringLong, String stringShort){
     int indexBack = 0;
-    for (int i = 0; i < indexLong.length(); i++) {
-      if(indexLong.contains(indexShort)){
-        indexBack = indexLong.indexOf(indexShort);
+    for (int i = 0; i < stringLong.length(); i++) {
+      if(stringLong.contains(stringShort)){
+        indexBack = stringLong.indexOf(stringShort);
       }else{
         return -1;
       }
