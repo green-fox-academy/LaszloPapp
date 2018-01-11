@@ -5,9 +5,7 @@ import java.util.ArrayList;
 //Garden class
 public class Garden {
 
-
     ArrayList<Plant> plants;
-
 
     public Garden(){
 

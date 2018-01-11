@@ -17,16 +17,13 @@ public class Main {
                 add(new Trees("purple", 0));
                 add(new Trees("orange", 0));
 
-            }};
+            }
+        };
 
         garden.Lister();
-
         garden.WaterThem(40);
-
         garden.Lister();
-
         garden.WaterThem(70);
-
         garden.Lister();
 
 

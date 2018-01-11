@@ -6,7 +6,6 @@ public class Flowers extends Plant{
     //constructor
     public Flowers(String color, float waterAmount) {
         super(color, waterAmount);
-
     }
 
     public @Override void ShowState(){
@@ -17,5 +16,4 @@ public class Flowers extends Plant{
             System.out.println("The " + color + " flower doesn't needs water");
         }
     }
-
 }
