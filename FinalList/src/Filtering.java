@@ -1,22 +1,18 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Filtering {
 
   public static void main(String[] args) {
 
-    ArrayList<Integer> arrayListInput = new ArrayList<>(Arrays.asList(1, 11, 34, 11, 52, 61, 1, 34));
-    System.out.println(listChecker(arrayListInput));
-  }
+    Scanner sc = new Scanner(System.in);
 
-  public static ArrayList<Integer> listChecker(ArrayList<Integer> input) {
+    System.out.println("Give me a number");
+    int i = Integer.parseInt(sc.next());
 
-    ArrayList<Integer> result = new ArrayList<>();
-    for (int i = 0; i < input.size(); i++) {
-      if(!result.contains(input.get(i))){
-        result.add(input.get(i));
-      }
+    if (i%2==0){
+      System.out.println("The number you provided is Even");
+    }else{
+      System.out.println("The number you provided is Odd");
     }
-    return result;
-  }
+  } 
 }

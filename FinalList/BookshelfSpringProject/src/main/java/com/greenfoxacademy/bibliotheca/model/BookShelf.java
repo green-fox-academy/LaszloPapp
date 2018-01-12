@@ -1,9 +1,10 @@
 package com.greenfoxacademy.bibliotheca.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import org.hibernate.annotations.Type;
-
-import javax.persistence.*;
-import javax.websocket.Encoder;
-import javax.xml.soap.Text;
 
 @Entity
 public class BookShelf {

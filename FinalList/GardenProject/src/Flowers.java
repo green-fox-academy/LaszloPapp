@@ -8,7 +8,8 @@ public class Flowers extends Plant{
         super(color, waterAmount);
     }
 
-    public @Override void ShowState(){
+    @Override
+    public void ShowState(){
 
         if(waterAmount<5){
             System.out.println("The " + color + " flower needs water.");

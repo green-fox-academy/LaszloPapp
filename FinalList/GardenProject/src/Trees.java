@@ -6,10 +6,10 @@ public class Trees extends Plant{
     //constructor
     public Trees(String color, float waterAmount){
         super(color, waterAmount);
-
     }
 
-    public @Override void ShowState(){
+    @Override
+    public void ShowState(){
 
         if(waterAmount<10){
             System.out.println("The " + color + " tree needs water.");

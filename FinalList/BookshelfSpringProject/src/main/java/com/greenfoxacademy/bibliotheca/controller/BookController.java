@@ -21,7 +21,11 @@ public class BookController {
     @Autowired
     ScoreProvider scoreProvider;
 
-
+    /**
+     *
+     * @param model
+     * @return
+     */
     @RequestMapping({"/"})
     public String listOfBooks(Model model){
         if (size(bookRepo.findAll()) != 0) {
@@ -58,6 +62,11 @@ public class BookController {
         return "addBook";
     }
 
+    /**
+     * This method saves a new book in the bookshelf
+     * @param bookShelf 1 bookshelf instance for saving
+     * @return redirects to the main page
+     */
     @RequestMapping(value = "/addBook", method = RequestMethod.POST)
     public String addNewBookToShelf(@ModelAttribute BookShelf bookShelf) {
         bookRepo.save(bookShelf);
