@@ -14,5 +14,5 @@ public class Filtering {
     }else{
       System.out.println("The number you provided is Odd");
     }
-  } 
+  }
 }
