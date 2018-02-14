@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
 <head>
     <meta charset="UTF-8" />
-    <link href="/style.css" rel="stylesheet"/>
+    <link href="../static/library.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
     <title>Details Page</title>
@@ -15,22 +15,21 @@
 </div>
 <h1 style="color: lavenderblush">Details</h1>
 <table class="table table-hover table-dark" style="font-size: small">
-
     <tr th:each="book : ${list}">
-        <h2>Title:</h2>
-        <h3><th:order th:text="${book.title}" ></th:order></h3>
-        <h2>Author:</h2>
-        <h3><th:order th:text="${book.author}" ></th:order></h3>
-        <h2>Isbn:</h2>
-        <h3><th:order th:text="${book.isbn}" ></th:order></h3>
-        <h2>Release date:</h2>
-        <h3><th:order th:text="${book.year}" ></th:order></h3>
-        <h2>Favourite:</h2>
-        <h3><th:order th:if="${book.isFavourite()}">*</th:order></h3>
-        <h2>Score:</h2>
-        <h3><th:order th:text="${book.score}" ></th:order></h3>
-        <h2>Summary:</h2>
-        <h3><th:order th:text="${book.longDescription}" ></th:order></h3>
+        <h2 style="color: lavenderblush">Title:</h2>
+        <h3 style="color: lavenderblush"><th:order th:text="${book.title}" ></th:order></h3>
+        <h2 style="color: lavenderblush">Author:</h2>
+        <h3 style="color: lavenderblush"><th:order th:text="${book.author}" ></th:order></h3>
+        <h2 style="color: lavenderblush">Isbn:</h2>
+        <h3 style="color: lavenderblush"><th:order th:text="${book.isbn}" ></th:order></h3>
+        <h2 style="color: lavenderblush">Release date:</h2>
+        <h3 style="color: lavenderblush"><th:order th:text="${book.year}" ></th:order></h3>
+        <h2 style="color: lavenderblush">Favourite:</h2>
+        <h3 style="color: lavenderblush"><th:order th:if="${book.isFavourite()}">*</th:order></h3>
+        <h2 style="color: lavenderblush">Score:</h2>
+        <h3 style="color: lavenderblush"><th:order th:text="${book.score}" ></th:order></h3>
+        <h2 style="color: lavenderblush">Summary:</h2>
+        <h3 style="color: lavenderblush"><th:order th:text="${book.longDescription}" ></th:order></h3>
     </tr>
 </table>
 </body>

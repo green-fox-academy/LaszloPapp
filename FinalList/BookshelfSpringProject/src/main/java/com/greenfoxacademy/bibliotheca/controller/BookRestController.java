@@ -14,7 +14,7 @@ public class BookRestController {
     BookRepository bookRepo;
 
     @RequestMapping(value = "/api/search/{author}", method = RequestMethod.GET)
-    public JasonResponse ApiGetByAuthor(@PathVariable String author){
+    public JasonResponse apiGetByAuthor(@PathVariable String author){
         return new JasonResponse(bookRepo.findAllByAuthor(author));
     }
 }

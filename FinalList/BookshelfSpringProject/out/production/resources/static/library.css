@@ -1,7 +1,7 @@
 body{
     width: auto;
     height: auto;
-    background-image: url("http://whytoread.com/wp-content/uploads/2015/03/best-books-book-youll-ever-read.jpg");
+    background-image: url("https://www.expedia.ca/travelblog/wp-content/uploads/2014/07/Books_for_Wanderers_Featured.jpg");
 }
 
 input[type=text], select {
@@ -54,3 +54,12 @@ a.one{
 div.link{
     width: 200px;
 }
+
+h2{
+    font-color: white;
+}
+
+h3{
+    font-color: white;
+}
+
