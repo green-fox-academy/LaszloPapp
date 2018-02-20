@@ -1,24 +1,24 @@
 package com.greenfoxacademy.bibliotheca.repository;
-import com.greenfoxacademy.bibliotheca.model.BookShelf;
+import com.greenfoxacademy.bibliotheca.model.Book;
 import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-public interface BookRepository extends CrudRepository<BookShelf, Long> {
+public interface BookRepository extends CrudRepository<Book, Long> {
 
-    List<BookShelf> findAllByTitleIsContaining(String title);
-    List<BookShelf> findAllByAuthorIsContaining(String author);
-    List<BookShelf> findAllByIsbnIsLike(String isbn);
-    List<BookShelf> findAllByYearIsLike(String year);
+    List<Book> findAllByTitleIsContaining(String title);
+    List<Book> findAllByAuthorIsContaining(String author);
+    List<Book> findAllByIsbnIsLike(String isbn);
+    List<Book> findAllByYearIsLike(String year);
 
     @Query(value = "SELECT * FROM book_shelf WHERE (favourite = TRUE)", nativeQuery = true)
-    List<BookShelf> listFavourites();
+    List<Book> listFavourites();
 
     @Query(value = "SELECT * FROM book_shelf ORDER BY (score) DESC", nativeQuery = true)
-    List<BookShelf> orderedByScore();
+    List<Book> orderedByScore();
 
     @Query(value = "SELECT * FROM book_shelf ORDER BY (isbn)", nativeQuery = true)
-    List<BookShelf> orderedByIsbn();
+    List<Book> orderedByIsbn();
 
-    List<BookShelf> findAllByAuthor(String author);
+    List<Book> findAllByAuthor(String author);
 }
