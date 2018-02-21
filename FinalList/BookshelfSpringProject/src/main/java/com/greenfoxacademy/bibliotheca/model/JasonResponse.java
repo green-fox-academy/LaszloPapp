@@ -5,12 +5,12 @@ import java.util.List;
 public class JasonResponse {
 
     String result;
-    List<BookShelf> data;
+    List<Book> data;
 
     public JasonResponse() {
     }
 
-    public JasonResponse(List<BookShelf> data) {
+    public JasonResponse(List<Book> data) {
         this.result = "ok";
         this.data = data;
     }
@@ -23,11 +23,11 @@ public class JasonResponse {
         this.result = result;
     }
 
-    public List<BookShelf> getData() {
+    public List<Book> getData() {
         return data;
     }
 
-    public void setData(List<BookShelf> data) {
+    public void setData(List<Book> data) {
         this.data = data;
     }
 }

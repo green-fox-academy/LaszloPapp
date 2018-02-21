@@ -16,11 +16,11 @@
 <h1 style="color: lavenderblush">Edit Books</h1>
 <div>
 <form th:action="@{/{id}/edit (id=${id})}" th:object="${edit}" method="post">
-    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{author}" />
-    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{title}" />
-    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{description}" />
-    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{isbn}" />
-    <input class="col-xs-4 input-sm" style="size: 16px" type="text" th:field="*{year}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" placeholder="author" th:field="*{author}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" placeholder="title" th:field="*{title}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" placeholder="description" th:field="*{description}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" placeholder="isbn" th:field="*{isbn}" />
+    <input class="col-xs-4 input-sm" style="size: 16px" type="text" placeholder="year" th:field="*{year}" />
     <input class="col-xs-4 input-sm" type="text" placeholder="LongDescription" th:field="*{longDescription}" />
     <input style="size: 16px" type="checkbox" name="favourite" th:checked="*{favourite}" th:text="FAVOURITE" />
     <button class="btn btn-info btn-lg" style="border-radius: 8px" type="submit" value="title" >SAVE</button>

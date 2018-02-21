@@ -1,5 +1,5 @@
 package com.greenfoxacademy.bibliotheca.controller;
-import com.greenfoxacademy.bibliotheca.model.BookShelf;
+import com.greenfoxacademy.bibliotheca.model.Book;
 import com.greenfoxacademy.bibliotheca.model.ErrorMessage;
 import com.greenfoxacademy.bibliotheca.repository.BookRepository;
 import com.greenfoxacademy.bibliotheca.service.ScoreProvider;
@@ -58,18 +58,18 @@ public class BookController {
 
     @RequestMapping(value = "/addBook", method = RequestMethod.GET)
     public String addNewBookToShelf(Model model) {
-        model.addAttribute("addBook", new BookShelf());
+        model.addAttribute("addBook", new Book());
         return "addBook";
     }
 
     /**
      * This method saves a new book in the bookshelf
-     * @param bookShelf 1 bookshelf instance for saving
+     * @param book 1 bookshelf instance for saving
      * @return redirects to the main page
      */
     @RequestMapping(value = "/addBook", method = RequestMethod.POST)
-    public String addNewBookToShelf(@ModelAttribute BookShelf bookShelf) {
-        bookRepo.save(bookShelf);
+    public String addNewBookToShelf(@ModelAttribute Book book) {
+        bookRepo.save(book);
         return "redirect:/";
     }
 
@@ -86,8 +86,8 @@ public class BookController {
     }
 
     @RequestMapping(value = "/{id}/edit", method = RequestMethod.POST)
-    public String editBookById(@ModelAttribute BookShelf bookShelf) {
-        bookRepo.save(bookShelf);
+    public String editBookById(@ModelAttribute Book book) {
+        bookRepo.save(book);
         return "redirect:/";
     }
 
@@ -97,7 +97,7 @@ public class BookController {
         return "index";
     }
 
-    @RequestMapping(value = "/isbnsearch", method = RequestMethod.GET)
+    @RequestMapping(value = "/isbnSearch", method = RequestMethod.GET)
     public String getBookListByISBN(Model model, String search){
         if (search.matches("^[0-9-]*$")) {
             model.addAttribute("list", bookRepo.findAllByIsbnIsLike("%" + search + "%"));
