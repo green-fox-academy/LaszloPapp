@@ -63,7 +63,7 @@
     </thead>
     <tr th:each="book : ${list}">
         <td>
-            <img src="${book.image}" border="0"/>
+            <img src="${book.image}" />
         </td>
             <td th:text="${book.title}" ></td>
         <td>
